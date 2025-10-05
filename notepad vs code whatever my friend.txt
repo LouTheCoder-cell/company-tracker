@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faiza’s Global Pulse</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfdfd;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #222;
+    }
+    p {
+      font-style: italic;
+      font-size: 1.2em;
+      color: #555;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌍 Welcome to Faiza’s Global Pulse</h1>
+  <p>Tracking the rise and fall of companies across continents.<br>
+     Where data meets poetry, and every collapse leaves a trace.</p>
+  <footer>
+    <p>Made with resilience and rhythm in Torino</p>
+  </footer>
+</body>
+</html>
