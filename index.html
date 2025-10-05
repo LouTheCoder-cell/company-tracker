@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin: 2em;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 200px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 2em;
+      color: #007BFF;
+    }
+    .card p {
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Company Tracker</h1>
+    <p>Live stats on new companies and bankruptcies</p>
+  </header>
+
+  <div class="stats">
+    <div class="card">
+      <h2 id="created">1,234</h2>
+      <p>Companies Created</p>
+    </div>
+    <div class="card">
+      <h2 id="bankrupt">56</h2>
+      <p>Bankruptcies</p>
+    </div>
+  </div>
+
+  <script>
+    // Placeholder logic — replace with real API calls later
+    const created = document.getElementById("created");
+    const bankrupt = document.getElementById("bankrupt");
+
+    // Simulate dynamic update
+    setInterval(() => {
+      created.textContent = (1234 + Math.floor(Math.random() * 10)).toLocaleString();
+      bankrupt.textContent = (56 + Math.floor(Math.random() * 3)).toLocaleString();
+    }, 5000);
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 220px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #007BFF;
+    }
+    .card p {
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Company Tracker</h1>
+    <p>Live simulation of company births and bankruptcies</p>
+  </header>
+
+  <div class="stats">
+    <div class="card">
+      <h2 id="created">1,234</h2>
+      <p>Companies Created</p>
+    </div>
+    <div class="card">
+      <h2 id="bankrupt">56</h2>
+      <p>Bankruptcies</p>
+    </div>
+  </div>
+
+  <script>
+    const createdEl = document.getElementById("created");
+    const bankruptEl = document.getElementById("bankrupt");
+
+    function updateStats() {
+      const created = 1200 + Math.floor(Math.random() * 100);
+      const bankrupt = 50 + Math.floor(Math.random() * 20);
+      createdEl.textContent = created.toLocaleString();
+      bankruptEl.textContent = bankrupt.toLocaleString();
+    }
+
+    updateStats();
+    setInterval(updateStats, 5000);
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 220px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #007BFF;
+    }
+    .card p {
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #555;
+    }
+    canvas {
+      margin-top: 3em;
+      max-width: 600px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📊 Company Tracker</h1>
+    <p>Live simulation of company births and bankruptcies</p>
+  </header>
+
+  <div class="stats">
+    <div class="card">
+      <h2 id="created">1,234</h2>
+      <p>Companies Created</p>
+    </div>
+    <div class="card">
+      <h2 id="bankrupt">56</h2>
+      <p>Bankruptcies</p>
+    </div>
+  </div>
+
+  <canvas id="trendChart" width="600" height="300"></canvas>
+
+  <script>
+    const createdEl = document.getElementById("created");
+    const bankruptEl = document.getElementById("bankrupt");
+
+    let createdHistory = [1200, 1250, 1300, 1280, 1350];
+    let bankruptHistory = [50, 55, 53, 60, 58];
+
+    const ctx = document.getElementById('trendChart').getContext('2d');
+    const trendChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        datasets: [
+          {
+            label: 'Companies Created',
+            data: createdHistory,
+            borderColor: '#007BFF',
+            fill: false
+          },
+          {
+            label: 'Bankruptcies',
+            data: bankruptHistory,
+            borderColor: '#FF4136',
+            fill: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+
+    function updateStats() {
+      const newCreated = 1200 + Math.floor(Math.random() * 100);
+      const newBankrupt = 50 + Math.floor(Math.random() * 20);
+
+      createdEl.textContent = newCreated.toLocaleString();
+      bankruptEl.textContent = newBankrupt.toLocaleString();
+
+      // Update chart data
+      createdHistory.push(newCreated);
+      bankruptHistory.push(newBankrupt);
+      if (createdHistory.length > 10) createdHistory.shift();
+      if (bankruptHistory.length > 10) bankruptHistory.shift();
+
+      trendChart.data.labels.push(`+${createdHistory.length}`);
+      if (trendChart.data.labels.length > 10) trendChart.data.labels.shift();
+
+      trendChart.data.datasets[0].data = createdHistory;
+      trendChart.data.datasets[1].data = bankruptHistory;
+      trendChart.update();
+    }
+
+    updateStats();
+    setInterval(updateStats, 5000);
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    select {
+      margin-top: 1em;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 220px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #007BFF;
+    }
+    .card p {
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Company Tracker</h1>
+    <p>Live simulation of company births and bankruptcies</p>
+    <label for="continent">🌍 Choose your continent:</label>
+    <select id="continent">
+      <option value="Europe">Europe</option>
+      <option value="Asia">Asia</option>
+      <option value="Africa">Africa</option>
+      <option value="North America">North America</option>
+      <option value="South America">South America</option>
+      <option value="Oceania">Oceania</option>
+    </select>
+  </header>
+
+  <div class="stats">
+    <div class="card">
+      <h2 id="created">1,234</h2>
+      <p>Companies Created</p>
+    </div>
+    <div class="card">
+      <h2 id="bankrupt">56</h2>
+      <p>Bankruptcies</p>
+    </div>
+  </div>
+
+  <script>
+    const createdEl = document.getElementById("created");
+    const bankruptEl = document.getElementById("bankrupt");
+    const continentSelect = document.getElementById("continent");
+
+    const dataByContinent = {
+      Europe: { baseCreated: 1200, baseBankrupt: 50 },
+      Asia: { baseCreated: 2000, baseBankrupt: 80 },
+      Africa: { baseCreated: 800, baseBankrupt: 30 },
+      "North America": { baseCreated: 1500, baseBankrupt: 60 },
+      "South America": { baseCreated: 1000, baseBankrupt: 40 },
+      Oceania: { baseCreated: 500, baseBankrupt: 20 }
+    };
+
+    function updateStats() {
+      const selected = continentSelect.value;
+      const base = dataByContinent[selected];
+
+      const newCreated = base.baseCreated + Math.floor(Math.random() * 100);
+      const newBankrupt = base.baseBankrupt + Math.floor(Math.random() * 20);
+
+      createdEl.textContent = newCreated.toLocaleString();
+      bankruptEl.textContent = newBankrupt.toLocaleString();
+    }
+
+    updateStats();
+    setInterval(updateStats, 5000);
+    continentSelect.addEventListener("change", updateStats);
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    select {
+      margin: 1em;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 220px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #007BFF;
+    }
+    .card p {
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #555;
+    }
+    svg {
+      margin-top: 2em;
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+    }
+    .country-select {
+      display: none;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Company Tracker</h1>
+    <p>Live simulation of company births and bankruptcies</p>
+    <label for="continent">🌍 Choose your continent:</label>
+    <select id="continent">
+      <option value="Europe">Europe</option>
+      <option value="Asia">Asia</option>
+      <option value="Africa">Africa</option>
+    </select>
+
+    <div class="country-select" id="countryContainer">
+      <label for="country">🏳️ Choose your country:</label>
+      <select id="country"></select>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="card">
+      <h2 id="created">1,234</h2>
+      <p>Companies Created</p>
+    </div>
+    <div class="card">
+      <h2 id="bankrupt">56</h2>
+      <p>Bankruptcies</p>
+    </div>
+  </div>
+
+  <!-- Simple SVG continent map -->
+  <svg viewBox="0 0 300 100">
+    <text x="20" y="30" font-size="16" fill="blue" cursor="pointer" onclick="selectContinent('Europe')">Europe</text>
+    <text x="120" y="30" font-size="16" fill="green" cursor="pointer" onclick="selectContinent('Asia')">Asia</text>
+    <text x="220" y="30" font-size="16" fill="brown" cursor="pointer" onclick="selectContinent('Africa')">Africa</text>
+  </svg>
+
+  <script>
+    const createdEl = document.getElementById("created");
+    const bankruptEl = document.getElementById("bankrupt");
+    const continentSelect = document.getElementById("continent");
+    const countrySelect = document.getElementById("country");
+    const countryContainer = document.getElementById("countryContainer");
+
+    const dataByRegion = {
+      Europe: {
+        countries: ["Italy", "France", "Germany"],
+        baseCreated: 1200,
+        baseBankrupt: 50
+      },
+      Asia: {
+        countries: ["Japan", "India", "China"],
+        baseCreated: 2000,
+        baseBankrupt: 80
+      },
+      Africa: {
+        countries: ["Nigeria", "Kenya", "South Africa"],
+        baseCreated: 800,
+        baseBankrupt: 30
+      }
+    };
+
+    function populateCountries(continent) {
+      const countries = dataByRegion[continent].countries;
+      countrySelect.innerHTML = "";
+      countries.forEach(c => {
+        const option = document.createElement("option");
+        option.value = c;
+        option.textContent = c;
+        countrySelect.appendChild(option);
+      });
+      countryContainer.style.display = "block";
+    }
+
+    function updateStats() {
+      const continent = continentSelect.value;
+      const base = dataByRegion[continent];
+      const newCreated = base.baseCreated + Math.floor(Math.random() * 100);
+      const newBankrupt = base.baseBankrupt + Math.floor(Math.random() * 20);
+      createdEl.textContent = newCreated.toLocaleString();
+      bankruptEl.textContent = newBankrupt.toLocaleString();
+    }
+
+    function selectContinent(name) {
+      continentSelect.value = name;
+      populateCountries(name);
+      updateStats();
+    }
+
+    continentSelect.addEventListener("change", () => {
+      populateCountries(continentSelect.value);
+      updateStats();
+    });
+
+    countrySelect.addEventListener("change", updateStats);
+
+    // Initial load
+    populateCountries(continentSelect.value);
+    updateStats();
+    setInterval(updateStats, 5000);
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    select {
+      margin: 1em;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 220px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #007BFF;
+    }
+    .card p {
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Company Tracker</h1>
+    <p>Live simulation of company births and bankruptcies</p>
+    <label for="continent">🌍 Choose your continent:</label>
+    <select id="continent">
+      <option value="Europe">Europe</option>
+      <option value="Asia">Asia</option>
+      <option value="Africa">Africa</option>
+    </select>
+
+    <label for="country">🏳️ Choose your country:</label>
+    <select id="country"></select>
+  </header>
+
+  <div class="stats">
+    <div class="card">
+      <h2 id="created">...</h2>
+      <p>Companies Created</p>
+    </div>
+    <div class="card">
+      <h2 id="bankrupt">...</h2>
+      <p>Bankruptcies</p>
+    </div>
+  </div>
+
+  <script>
+    const createdEl = document.getElementById("created");
+    const bankruptEl = document.getElementById("bankrupt");
+    const continentSelect = document.getElementById("continent");
+    const countrySelect = document.getElementById("country");
+
+    const dataByRegion = {
+      Europe: {
+        countries: ["Italy", "France", "Germany"],
+        baseCreated: 1200,
+        baseBankrupt: 50
+      },
+      Asia: {
+        countries: ["Japan", "India", "China"],
+        baseCreated: 2000,
+        baseBankrupt: 80
+      },
+      Africa: {
+        countries: ["Nigeria", "Kenya", "South Africa"],
+        baseCreated: 800,
+        baseBankrupt: 30
+      }
+    };
+
+    function populateCountries(continent) {
+      const countries = dataByRegion[continent].countries;
+      countrySelect.innerHTML = "";
+      countries.forEach(c => {
+        const option = document.createElement("option");
+        option.value = c;
+        option.textContent = c;
+        countrySelect.appendChild(option);
+      });
+    }
+
+    function updateStats() {
+      const continent = continentSelect.value;
+      const base = dataByRegion[continent];
+      const newCreated = base.baseCreated + Math.floor(Math.random() * 100);
+      const newBankrupt = base.baseBankrupt + Math.floor(Math.random() * 20);
+      createdEl.textContent = newCreated.toLocaleString();
+      bankruptEl.textContent = newBankrupt.toLocaleString();
+    }
+
+    continentSelect.addEventListener("change", () => {
+      populateCountries(continentSelect.value);
+      updateStats();
+    });
+
+    countrySelect.addEventListener("change", updateStats);
+
+    // Initial load
+    populateCountries(continentSelect.value);
+    updateStats();
+    setInterval(updateStats, 5000);
+  </script>
+</body>
+</html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    select {
+      margin: 1em;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 220px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #007BFF;
+    }
+    .card p {
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Company Tracker</h1>
+    <p>Live simulation of company births and bankruptcies</p>
+    <label for="continent">🌍 Choose your continent:</label>
+    <select id="continent">
+      <option value="Europe">Europe</option>
+      <option value="Asia">Asia</option>
+      <option value="Africa">Africa</option>
+    </select>
+
+    <label for="country">🏳️ Choose your country:</label>
+    <select id="country"></select>
+  </header>
+
+  <div class="stats">
+    <div class="card">
+      <h2 id="created">...</h2>
+      <p>Companies Created</p>
+    </div>
+    <div class="card">
+      <h2 id="bankrupt">...</h2>
+      <p>Bankruptcies</p>
+    </div>
+  </div>
+
+  <script>
+    const createdEl = document.getElementById("created");
+    const bankruptEl = document.getElementById("bankrupt");
+    const continentSelect = document.getElementById("continent");
+    const countrySelect = document.getElementById("country");
+
+    const dataByRegion = {
+      Europe: {
+        countries: ["Italy", "France", "Germany"],
+        baseCreated: 1200,
+        baseBankrupt: 50
+      },
+      Asia: {
+        countries: ["Japan", "India", "China"],
+        baseCreated: 2000,
+        baseBankrupt: 80
+      },
+      Africa: {
+        countries: ["Nigeria", "Kenya", "South Africa"],
+        baseCreated: 800,
+        baseBankrupt: 30
+      }
+    };
+
+    function populateCountries(continent) {
+      const countries = dataByRegion[continent].countries;
+      countrySelect.innerHTML = "";
+      countries.forEach(c => {
+        const option = document.createElement("option");
+        option.value = c;
+        option.textContent = c;
+        countrySelect.appendChild(option);
+      });
+    }
+
+    function updateStats() {
+      const continent = continentSelect.value;
+      const base = dataByRegion[continent];
+      const newCreated = base.baseCreated + Math.floor(Math.random() * 100);
+      const newBankrupt = base.baseBankrupt + Math.floor(Math.random() * 20);
+      createdEl.textContent = newCreated.toLocaleString();
+      bankruptEl.textContent = newBankrupt.toLocaleString();
+    }
+
+    // Initial load
+    function initialize() {
+      populateCountries(continentSelect.value);
+      updateStats();
+    }
+
+    continentSelect.addEventListener("change", () => {
+      populateCountries(continentSelect.value);
+      updateStats();
+    });
+
+    countrySelect.addEventListener("change", updateStats);
+
+    initialize();
+    setInterval(updateStats, 5000);
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    input, select {
+      margin: 1em;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 2em;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 220px;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #007BFF;
+    }
+    .card p {
+      margin-top: 0.5em;
+      font-size: 1em;
+      color: #555;
+    }
+    #flag {
+      margin-top: 1em;
+      width: 100px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Company Tracker</h1>
+    <p>Type a country name to see its flag and simulated stats</p>
+    <input type="text" id="countryInput" placeholder="Type a country..." />
+    <select id="countrySelect"></select>
+    <img id="flag" src="" alt="Country flag" />
+  </header>
+
+  <div class="stats">
+    <div class="card">
+      <h2 id="created">...</h2>
+      <p>Companies Created</p>
+    </div>
+    <div class="card">
+      <h2 id="bankrupt">...</h2>
+      <p>Bankruptcies</p>
+    </div>
+  </div>
+
+  <script>
+    const createdEl = document.getElementById("created");
+    const bankruptEl = document.getElementById("bankrupt");
+    const countryInput = document.getElementById("countryInput");
+    const countrySelect = document.getElementById("countrySelect");
+    const flagEl = document.getElementById("flag");
+
+    const countries = [
+      "Italy", "France", "Germany", "Japan", "India", "China",
+      "Nigeria", "Kenya", "South Africa", "Brazil", "Canada", "Australia"
+    ];
+
+    function simulateStats(country) {
+      const baseCreated = 1000 + Math.floor(Math.random() * 500);
+      const baseBankrupt = 30 + Math.floor(Math.random() * 50);
+      createdEl.textContent = baseCreated.toLocaleString();
+      bankruptEl.textContent = baseBankrupt.toLocaleString();
+      flagEl.src = `https://flagcdn.com/w320/${country.toLowerCase().replace(/ /g, "-")}.png`;
+    }
+
+    function updateCountryList() {
+      const query = countryInput.value.toLowerCase();
+      countrySelect.innerHTML = "";
+      countries
+        .filter(c => c.toLowerCase().includes(query))
+        .forEach(c => {
+          const option = document.createElement("option");
+          option.value = c;
+          option.textContent = c;
+          countrySelect.appendChild(option);
+        });
+      if (countrySelect.options.length > 0) {
+        simulateStats(countrySelect.options[0].value);
+      }
+    }
+
+    countryInput.addEventListener("input", updateCountryList);
+    countrySelect.addEventListener("change", () => {
+      simulateStats(countrySelect.value);
+    });
+
+    // Initial load
+    updateCountryList();
+    setInterval(() => {
+      if (countrySelect.value) simulateStats(countrySelect.value);
+    }, 5000);
+  </script>
+</body>
+</html>
