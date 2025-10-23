@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Earth Atlas · Countries Portfolio</title>
+    <meta name="description" content="An earth-themed portfolio of every country with detailed pages and a built-in Geo AI assistant." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-mark">🌍</span>
+          <h1>Earth Atlas</h1>
+        </div>
+        <nav class="header-nav">
+          <a class="nav-link active" href="./index.html">Countries</a>
+          <a class="nav-link" href="https://restcountries.com" target="_blank" rel="noopener">Data Source</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main">
+      <section class="controls" aria-label="Filters and search">
+        <div class="control-row">
+          <div class="control search">
+            <label for="search" class="sr-only">Search countries</label>
+            <input id="search" type="search" placeholder="Search countries, capitals, or codes…" autocomplete="off" />
+          </div>
+          <div class="control select">
+            <label for="regionFilter" class="sr-only">Region</label>
+            <select id="regionFilter">
+              <option value="">All regions</option>
+            </select>
+          </div>
+          <div class="control select">
+            <label for="sortBy" class="sr-only">Sort by</label>
+            <select id="sortBy">
+              <option value="name">Sort: Name (A→Z)</option>
+              <option value="population">Sort: Population</option>
+              <option value="area">Sort: Area</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section id="gridSection" class="grid-section" aria-live="polite">
+        <div id="grid" class="grid"></div>
+        <div id="gridEmpty" class="grid-empty" hidden>
+          <p>No countries match your filters.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>Built with ❤️ for geography · Data by <a href="https://restcountries.com" target="_blank" rel="noopener">REST Countries</a></p>
+    </footer>
+
+    <div id="geo-ai-root"></div>
+
+    <script defer src="./assets/js/api.js"></script>
+    <script defer src="./assets/js/ai.js"></script>
+    <script defer src="./assets/js/index.js"></script>
+  </body>
+</html>

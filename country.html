@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Earth Atlas · Country</title>
+    <meta name="description" content="Country details with maps, stats, neighbors, and more." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-mark">🌍</span>
+          <h1><a class="brand-link" href="./index.html">Earth Atlas</a></h1>
+        </div>
+        <nav class="header-nav">
+          <a class="nav-link" href="./index.html">Countries</a>
+          <a class="nav-link" href="https://restcountries.com" target="_blank" rel="noopener">Data Source</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main">
+      <a class="back" href="./index.html">← Back to countries</a>
+
+      <article id="country" class="country" aria-live="polite">
+        <div class="country-hero">
+          <div class="country-flags">
+            <img id="flagImg" class="flag" alt="Flag" />
+            <img id="coatImg" class="coat" alt="Coat of arms" />
+          </div>
+          <div class="country-title">
+            <h2 id="countryName">Loading…</h2>
+            <p id="countryOfficial" class="muted"></p>
+          </div>
+        </div>
+
+        <section class="country-grid" id="countryGrid"></section>
+
+        <section class="neighbors" id="neighborsSection" hidden>
+          <h3>Neighbors</h3>
+          <div id="neighbors" class="neighbor-chips"></div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer container">
+      <p>Built with ❤️ for geography · Data by <a href="https://restcountries.com" target="_blank" rel="noopener">REST Countries</a></p>
+    </footer>
+
+    <div id="geo-ai-root"></div>
+
+    <script defer src="./assets/js/api.js"></script>
+    <script defer src="./assets/js/ai.js"></script>
+    <script defer src="./assets/js/country.js"></script>
+  </body>
+</html>
